@@ -85,16 +85,16 @@ junk = ["Fred", True, [1, 2, 3], 234]
 
 # Dictionaries (unordered, mutable, does NOT allow duplicates & indexed w/ key value pairs)
 
-my_pairs = {
-    123: "number",
-    "name": "Broomhilda",
-}
+# my_pairs = {
+#     123: "number",
+#     "name": "Broomhilda",
+# }
 
 # print(my_pairs["name"])
 
 # Add new properties
-my_pairs["name"] = "Jones"
-my_pairs["address"] = {"number": 123, "street": "Sesame St"}
+# my_pairs["name"] = "Jones"
+# my_pairs["address"] = {"number": 123, "street": "Sesame St"}
 # print(my_pairs)
 
 # Loop over keys and values
@@ -106,15 +106,15 @@ my_pairs["address"] = {"number": 123, "street": "Sesame St"}
 # Access different parts of the dict
 # print(my_pairs.keys())
 
-my_pairs_values = my_pairs.values()
+# my_pairs_values = my_pairs.values()
 # print(type(my_pairs_values))
 
 # print(my_pairs_values)
 # for x in my_pairs_values:
 #     print(x)
 
-my_pairs_values_list = list(my_pairs_values)
-print(my_pairs_values_list)
+# my_pairs_values_list = list(my_pairs_values)
+# print(my_pairs_values_list)
 
 # print(my_pairs_values_list)
 # my_pairs_items = my_pairs.items() # returns a list of tuples!
@@ -157,16 +157,18 @@ print(my_pairs_values_list)
 # my_tup = ("WTF", "I'm hungry")
 # print(my_tup)
 
-# If you have one value in a tuple, you have to follow it with a comma! Otherwise, Python will think it's a string.
+# If you have one value in a tuple, you have to follow it with a comma! Otherwise, Python will think it's a string (because of the double quotes).
 # my_little_tup = ("hello",)
 # print(isinstance(my_little_tup, tuple))
+
+# print(type(my_little_tup))
 
 # ========================================
 
 # Sets (unordered, unindexed & does NOT allow duplicates)
 
-# my_stuff = {"Fred", True, 123, "Jones", "Fred"}
-# print(my_stuff)
+my_stuff = {"Fred", True, 123, "Jones", "Fred"}
+# print(my_stuff) 
 
 # Turn a set into a list, if you want to
 # print(list(my_stuff))
@@ -187,29 +189,38 @@ print(my_pairs_values_list)
 # my_hmmmm = set()
 # print("set?", type(my_hmmmm))
 # my_hmmmm.add("lonely string")
+# my_hmmmm.update(["lonely string", False], {0, 99}, "hi")
 # print("set?", my_hmmmm)
 
 # Because sets are unordered and unindexed, you cannot access the individual items in a set. And since you can't access an individual item, that also means you can't change it once it's been added to the set.
 
 # instructors = {"Chase", "Kristen", "Jisie"}
+# current_instructor = {"Jisie"}
 
 # Loop over the set
 # for person in instructors:
 #     print(person)
 
-# Check for item in a collection
+# Check for item in a collection (applies to lists, dictionaries, tuples and sets)
 # if "Jisie" in instructors:
-#   print("Yes, Jisie is in this collection")
+#     print("Yes, Jisie is in this collection")
+  
+# for person in instructors:
+#     if person in current_instructor:
+#         print(person)
 
 # ========================================
 
 # For loops
 
-# languages = ["HTML", "CSS", "C#", "Javascript", "Python"]
-# for l in languages:
-#     # if l == "C#":
-#     #     break
-#     #     continue
-#     print(l)
-# else:
-#     print("Graduated from NSS!")
+languages = ["HTML", "CSS", "C#", "Javascript", "Python"]
+for l in languages:
+    if l == "C#":
+          # break
+        continue
+#         # pass (can be used for functions and loops as well)
+    # breakpoint()
+    print(l)
+else:
+    print("Graduated from NSS!")
+# print("Outside loop")
